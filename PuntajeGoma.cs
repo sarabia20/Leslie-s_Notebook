@@ -35,4 +35,4 @@ public class PuntajeGoma : MonoBehaviour
             Destroy(this.gameObject);//y eliminalo
         }
     }
-}
+}//Fin de la clase
