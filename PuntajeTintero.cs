@@ -2,7 +2,7 @@
 //Asignatura: Estructura de datos
 //Descripcion del usos de este codigo:
 /*
-Este script se utilizara para que en la pantalla se visualise el contador de tintero al colisionar con el
+Este script se utilizara para que en la pantalla se visualise el contador de tintero al colisionar con el.
 */
 using System.Collections;
 using System.Collections.Generic;
