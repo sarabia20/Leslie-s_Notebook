@@ -1,4 +1,10 @@
-﻿using System.Collections;
+//Nombre del desarrollador: Sarabia Cruz Sayra Alondra.
+//Asignatura: Estructura de datos.
+//Descripción de usos de este codigo:
+/*
+Este script funcionara para detectar el piso
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
