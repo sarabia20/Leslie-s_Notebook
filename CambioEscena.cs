@@ -11,29 +11,27 @@ using UnityEngine.SceneManagement;
 
 public class CambioEscena : MonoBehaviour
 {//Inicio de clase
-    [SerializeField]
-    PlayerControl playerPuntaje;
-
-
     //+++++++área para declarar variables++++++
-    [Tooltip("Esta variable me ayuda a definir el numero de escena a cargar.")]
-    public int numeroEscena;
+    [SerializeField]
+    PlayerControl playerPuntaje;//manda a llamar las variables de esta varable de su script original
+    [Tooltip("Esta variable me ayuda a definir el numero de escena a cargar.")]//da para que sirve esa parte
+    public int numeroEscena;//es una variable publica con int que almacenara escenas 
 
     //*****************************************
 
     void Start()
     {
-        playerPuntaje = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControl>();
-        playerPuntaje.crayolas = 0;
+        playerPuntaje = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControl>();//player puntaje es igual a buscar un objeto con el tag Player y a su comoponenete player control
+        playerPuntaje.crayolas = 0;//el player puntaje mandara a traer a la variable de crayolas y esta es igual a cero
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       if (collision.gameObject.tag == "Player")
+       if (collision.gameObject.tag == "Player")//si un objeto con el tag player colisiona con el dueño del script
        {
-            if (playerPuntaje.crayolas ==3 )
+            if (playerPuntaje.crayolas ==3 )// si el player puntaje con la variable de crayola es igual a 3 
             {
-                SceneManager.LoadScene(numeroEscena);
+                SceneManager.LoadScene(numeroEscena);//cambia de escena 
             }
                 
        }
