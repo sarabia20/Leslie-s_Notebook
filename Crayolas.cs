@@ -1,12 +1,22 @@
-﻿using System.Collections;
+//Nombre del desarrollador: Sarabia Cruz Sayra Alondra
+//Asignatura: Estructura de datos
+//Descripcion del usos de este codigo:
+/*
+Este script se utilizara para que en la pantalla se visualise el contador de crayolas al sumar colisionar con una.
+*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Crayolas : MonoBehaviour
-{
+{//Inicio de la clase
+    //area para declarar varaibles*****************************************
+    
     [SerializeField]
     PlayerControl playerPuntaje;//Manda a llamar el componente del player control que contiene datos sobre que debe mostrar
     public int scoreValue;//almacenara el dato de tipo int para el score 
+    
+    //******************************************************************************
 
 
     // Start is called before the first frame update
