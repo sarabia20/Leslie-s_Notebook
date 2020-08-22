@@ -11,33 +11,31 @@ using UnityEngine;
 public class MuerteJugador : MonoBehaviour
 {
     [SerializeField]
-    float cronometro = 0.0f;
+    float cronometro = 0.0f;//variable que guarda la variable que contendra la información de cronometro
 
     [SerializeField]
-    PlayerControl playerVida;
-    //EL tipo dato  nombre de variable
-    Rigidbody2D fisicasRB2D;
-    // al declarar una variable como publica esta se podra visulizar en el inspector
-    public float fuerzaSaltoPersonaje;
+    PlayerControl playerVida;//manda a llamar la variable que contiene vida 
+    Rigidbody2D fisicasRB2D;//el componente RBD se guardara en las fisicas rbd
+    public float fuerzaSaltoPersonaje;//
 
     [SerializeField]
-    PlayerControl playerPuntaje;
-    public int scoreValue;
+    PlayerControl playerPuntaje;//es la variable que guarda la informacion y la manda a llmara de su script ptincipal 
+    public int scoreValue;//
 
     void Start()
     {
-        playerPuntaje = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControl>();
+        playerPuntaje = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControl>();//player puntaje es igual a buscar un objeto con el tag Player y a su comoponenete player control
 
     }
 
     private void OnCollisionEnter2D(Collision2D collision)//Evento o mecanica nucleo
     {
    
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")//suma la vida
         {
-            playerPuntaje.vida--;
-            playerPuntaje.AddScore(scoreValue);
+            playerPuntaje.vida--;//agrega el valor a score
+            playerPuntaje.AddScore(scoreValue);//y eliminalo
         }
     }
     
-}
+}//fin de la clase
