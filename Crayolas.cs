@@ -17,8 +17,6 @@ public class Crayolas : MonoBehaviour
     public int scoreValue;//almacenara el dato de tipo int para el score 
     
     //******************************************************************************
-
-
     // Start is called before the first frame update
     void Start()
     {
